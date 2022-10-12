@@ -42,7 +42,7 @@
 
   const settings = {
     amountWidget: {
-      defaultValue: 9, //na bogato! :D 
+      defaultValue: 1, 
       defaultMin: 1,
       defaultMax: 10,
     }

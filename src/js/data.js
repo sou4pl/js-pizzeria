@@ -4,11 +4,22 @@ dataSource.products = {
   cake: {
     class: 'small',
     name: 'Zio Stefano\'s Doughnut',
-    price: 9,
+    price: 6,
     description: 'Treat yourself with this soft, freshly baked cookie. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.',
     images: [
       '<img class="active" src="images/doughnut.svg">',
     ],
+    params: {
+      frosting: {
+        label: 'Frosting type',
+        type: 'radios',
+        options: {
+          without: {label: 'Without', price: 0, default: true},
+          vanilla: {label: 'Vanilla', price: 1},
+          chocolate: {label: 'Chocolate', price: 2},
+        },
+      },
+    },
   },
   breakfast: {
     class: 'small',
@@ -23,10 +34,10 @@ dataSource.products = {
         label: 'Coffee type',
         type: 'radios',
         options: {
-          latte: {label: 'Latte', price: 1, default: true},
-          cappuccino: {label: 'Cappuccino', price: 1},
+          latte: {label: 'Latte', price: 0, default: true},
+          cappuccino: {label: 'Cappuccino', price: 2},
           espresso: {label: 'Espresso', price: 1},
-          macchiato : {label: 'Macchiato ', price: 1},
+          macchiato : {label: 'Macchiato ', price: 3},
         },
       },
     },

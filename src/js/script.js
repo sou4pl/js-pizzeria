@@ -291,7 +291,6 @@
 
       thisCart.getElements(element);
       thisCart.initActions(element);
-      console.log('new Cart', thisCart);
     }
 
     getElements(element){
@@ -317,7 +316,22 @@
       const generatedDOM = utils.createDOMFromHTML(generatedHTML);
       thisCart.dom.productList.appendChild(generatedDOM);
       thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
-      //console.log('thisCart.products', thisCart.products)
+      console.log(thisCart.products);
+    }
+    update(){
+      const thisCart = this; 
+      const deliveryFee = settings.cart.defaultDeliveryFee;
+      let totalNumber = 0;
+      let subtotalPrice = 0;
+      for (let product of thisCart.products){
+        totalNumber += product.amount;
+        subtotalPrice += product.price;
+      }
+      console.log('totalNumber', totalNumber);
+      console.log('subtotalPrice', subtotalPrice);
+      thisCart.totalPrice = thisCart.subtotalPrice + deliveryFee;
+      console.log('totalprice',thisCart.totalPrice);
+
     }
   }
 
@@ -332,7 +346,6 @@
       thisCartProduct.priceSingle = menuProduct.priceSingle;
       thisCartProduct.getElements(element);
       thisCartProduct.initAmountWidget(element);
-      console.log('thisCartProduct', thisCartProduct);
     }
 
     getElements(element){

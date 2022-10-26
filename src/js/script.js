@@ -355,9 +355,13 @@
       thisCart.dom.totalPrice.innerHTML = thisCart.totalPrice;
     }
 
-    //remove(){
-
-    //}
+    remove(cartProduct){
+      const thisCart = this;
+      cartProduct.dom.wrapper.remove();
+      const indexOfProduct = thisCart.products.indexOf(cartProduct);
+      thisCart.products.splice(indexOfProduct, 1);
+      thisCart.update();
+    }
   }
 
   class CartProduct{

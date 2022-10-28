@@ -1,5 +1,4 @@
-export 
-const select = {
+export const select = {
   templateOf: {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product',

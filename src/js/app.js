@@ -1,4 +1,3 @@
-// eslint-disable-line no-unused-vars
 import {settings, select, classNames, templates} from './settings.js';
 import Product from './components/product.js';
 import Cart from './components/cart.js';
@@ -32,6 +31,7 @@ const app = {
     const cartElem = document.querySelector(select.containerOf.cart);
     thisApp.cart = new Cart(cartElem);
     thisApp.productList = document.querySelector(select.containerOf.menu);
+    console.log(thisApp.productList);
     thisApp.productList.addEventListener('addToCart', function(event){
       app.cart.add(event.detail.product);
     });

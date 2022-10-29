@@ -8,7 +8,15 @@ const app = {
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
     thisApp.activatePage(thisApp.pages[0].id);
-    
+
+    for (let link of thisApp.navLinks){
+      link.addEventListener('click', function(event){
+        const clickedElement = this;
+        event.preventDefault();
+        const id = clickedElement.getAttribute('href').replace('#', '');
+        thisApp.activatePage(id);
+      });
+    }
   },
 
   activatePage: function(pageId){

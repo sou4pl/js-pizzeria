@@ -1,21 +1,21 @@
 import {settings, select} from '../settings.js';
+import BaseWidget from './baseWidget.js';
 
-class AmountWidget{
+class AmountWidget extends BaseWidget{
   constructor(element){
+    super(element, (thisWidget.input.value || settings.amountWidget.defaultValue);)
     const thisWidget = this;
 
     thisWidget.getElements(element);
-    thisWidget.setValue(thisWidget.input.value || settings.amountWidget.defaultValue);
     thisWidget.initActions(element);
   }
 
-  getElements(element){
+  getElements(){
     const thisWidget = this;
   
-    thisWidget.element = element;
-    thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
-    thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
-    thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
+    thisWidget.input = thisWidget.dom.wrapper.querySelector(select.widgets.amount.input);
+    thisWidget.linkDecrease = thisWidget.dom.wrapper.querySelector(select.widgets.amount.linkDecrease);
+    thisWidget.linkIncrease = thisWidget.dom.wrapper.querySelector(select.widgets.amount.linkIncrease);
   }
 
   setValue(value){
@@ -46,7 +46,7 @@ class AmountWidget{
     const event = new CustomEvent('updated', {
       bubbles: true
     });
-    thisWidget.element.dispatchEvent(event);
+    thisWidget.dom.wrapper.dispatchEvent(event);
   }
 }
 

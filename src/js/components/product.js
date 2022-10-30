@@ -114,7 +114,7 @@ class Product {
   initAmountWidget() {
     const thisProduct = this;
     thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
-    thisProduct.amountWidgetElem.addEventListener('updated', function () { thisProduct.processOrder(); });
+    thisProduct.amountWidgetElem.addEventListener('updated', function () { thisProduct.processOrder();});
   }
 
   prepareCartProduct() {

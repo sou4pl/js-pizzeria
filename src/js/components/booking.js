@@ -4,7 +4,6 @@ import AmountWidget from './amountWidget.js';
 class Booking {
   constructor(element){
     const thisBooking = this;
-    console.log('poszło!', thisBooking);
     thisBooking.render(element);
     thisBooking.initWidgets();
   }
@@ -23,9 +22,9 @@ class Booking {
   initWidgets(){
     const thisBooking = this;
     thisBooking.peopleAmountWidget = new AmountWidget(thisBooking.dom.peopleAmount);
-    thisBooking.dom.peopleAmount.addEventListener('click', function(){console.log('poszło w ludzi!');});
+    //thisBooking.dom.peopleAmount.addEventListener('click', function(){console.log('poszło w ludzi!');});
     thisBooking.hoursAmountWidget = new AmountWidget(thisBooking.dom.hoursAmount);
-    thisBooking.dom.hoursAmount.addEventListener('click', function(){console.log('poszło w godziny');});
+    //thisBooking.dom.hoursAmount.addEventListener('click', function(){console.log('poszło w godziny');});
   }
 }
 

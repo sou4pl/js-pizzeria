@@ -197,6 +197,11 @@
   }
 }
 
+.selected-table {
+  border: 3px solid #32d832;
+  color:#32d832;
+}
+
 .booking-options {
   @include flex(row, flex-start, space-between);
   margin: ($base-size * 4) auto;

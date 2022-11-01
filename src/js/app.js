@@ -6,9 +6,11 @@ import Booking from './components/booking.js';
 const app = {
   initPages: function(){
     const thisApp = this;
+    thisApp.pages = [];
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
     const idFromHash = window.location.hash.replace('#/', '');
+    console.log(thisApp.pages);
     let pageMatchingHash = thisApp.pages[0].id;
     for (let page of thisApp.pages){
       if (page.id == idFromHash){

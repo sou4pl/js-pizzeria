@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1;
+  border-radius: 3px;
+  background-color: $color-main;
+  color: white;
+  padding: 48px;
+  margin: 3px 0;
+
+  &.smaller {
+    flex: 0 0 49%;
+    background-color: black;
+   color: white;
+}
+}

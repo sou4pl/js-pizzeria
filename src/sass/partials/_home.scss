@@ -1,24 +1,80 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+#pages {
+  >* {
+    display: none;
 
-.boxes-container {
+  }
+
+  >.active {
+    display: block;
+  }
+}
+.home-wrapper {
+  margin: $base-size*3 auto;
+  padding: $base-size*6 $base-size*4;
+  background: $color-light;
+  border-radius: $radius;
+}
+.row-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .box {
-  flex: 1;
-  border-radius: 3px;
+  flex: 100%;
+  border-radius: $radius;
   background-color: $color-main;
-  color: white;
-  padding: 48px;
-  margin: 3px 0;
+  color: $color-light;
+  text-align: center;
+  height: 120px;
+  position: relative;
 
   &.smaller {
-    flex: 0 0 49%;
-    background-color: black;
-   color: white;
-}
+    flex: 1;
+    color: $color-light; 
+  }
+
+  a {
+    position: absolute;
+    padding-top: 12px;
+    display: block;
+    top: 30px;
+    left: 75px;
+  }
+
+  p {
+    margin: 22px 0 -22px 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $radius;
+  }
+
+  span {
+    opacity: 0%;
+    position: absolute;
+    padding-top: 12px;
+    display: block;
+    top: 80px;
+    left: 45px;
+  }
+  
+
+  &:hover a {
+    transform: translateY(-40%);
+    transition: $transition;
+    margin: 0 0 10px 0;
+  }
+
+  &:hover span {
+    transform: translateY(-80%);
+    transition: $transition;
+    margin: 0 0 10px 0;
+    opacity: 100%;
+  }
 }

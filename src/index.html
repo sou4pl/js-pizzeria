@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizzeria</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.0/css/all.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="./vendor/range-slider.min.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -80,13 +80,17 @@
         <div class="row-wrapper">
           <div class="box smaller">
             <img src="./images/home/pizza-1.jpg" alt="pizza">
-            <a class="h1" href="#order">order online</a>
-            <span>Delicious food deliver to your door!</span>
+            <div class="box-text">
+              <a class="h1" href="#order">order online</a>
+              <span>Delicious food deliver to your door!</span>
+            </div>
           </div>
           <div class="box smaller">
-              <img src="./images/home/pizza-2.jpg" alt="pizza">
+            <img src="./images/home/pizza-2.jpg" alt="pizza">
+            <div class="box-text">
               <a class="h1" href="#booking">book a table</a>
               <span>Enjoy your time in our restaurant!</span>
+            </div>
           </div>
           <div class="box">
             <p class="h1">opening hours</p><p class="h2">tue-sun, 12pm-12am</p>
@@ -94,26 +98,99 @@
         </div>
       </div>
       <div class="carousel-wrapper">
-        <div class="main-carousel" data-flickity='{"autoPlay": true}'>
+        <div class="main-carousel" data-flickity='{"autoPlay": true, "wrapAround": true, "prevNextButtons": false}'>
           <div class="carousel-cell">
             <div class="carousel-row">
-              <div class="carousel-img">1</div>
-              <div class="carousel-text">2</div>
+              <div class="carousel-img"><img src="./images/home/pizza-3.jpg" alt="pizza"></div>
+              <div class="carousel-text">
+                <p class="h3">Best pizza in town!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis felis eros. Sed sollicitudin massa leo, sed maximus nulla vestibulum id.</p>
+                <p class="italic">Diana Spencer</p>
+              </div>
             </div>
           </div>
           <div class="carousel-cell">
             <div class="carousel-row">
-              <div class="carousel-img">3</div>
-              <div class="carousel-text">4</div>
+              <div class="carousel-img"><img src="./images/home/pizza-4.jpg" alt="pizza"></div>
+              <div class="carousel-text">
+                <p class="h3">Smells great like my F16!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis felis eros. Sed sollicitudin massa leo, sed maximus nulla vestibulum id.</p>
+                <p class="italic">Henry Mountbatten-Windsor</p>
+              </div>
             </div>
           </div>
           <div class="carousel-cell">
             <div class="carousel-row">
-              <div class="carousel-img">5</div>
-              <div class="carousel-text">6</div>
+              <div class="carousel-img"><img src="./images/home/pizza-5.jpg" alt="pizza"></div>
+              <div class="carousel-text">
+                <p class="h3">Just a lovely place!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis felis eros. Sed sollicitudin massa leo, sed maximus nulla vestibulum id.</p>
+                <p class="italic">Meghan Markle</p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="gallery-wrapper">
+        <div class="row-wrapper">
+          <div class="gallery-box">
+            <div class="picture-wrapper">
+              <img src="./images/home/pizza-6.jpg" alt="pizza">
+            </div>
+            <div class="icons-wrapper">
+              <a href="#"><i class="fa-solid fa-heart"></i></a>
+              <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+          <div class="gallery-box">
+            <div class="picture-wrapper">
+              <img src="./images/home/pizza-7.jpg" alt="pizza">
+            </div>
+            <div class="icons-wrapper">
+              <a href="#"><i class="fa-solid fa-heart"></i></a>
+              <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+          <div class="gallery-box">
+            <div class="picture-wrapper">
+              <img src="./images/home/pizza-8.jpg" alt="pizza">
+            </div>
+            <div class="icons-wrapper">
+              <a href="#"><i class="fa-solid fa-heart"></i></a>
+              <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row-wrapper">
+          <div class="gallery-box">
+            <div class="picture-wrapper">
+              <img src="./images/home/pizza-9.jpg" alt="pizza">
+            </div>
+            <div class="icons-wrapper">
+              <a href="#"><i class="fa-solid fa-heart"></i></a>
+              <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+          <div class="gallery-box">
+            <div class="picture-wrapper">
+              <img src="./images/home/pizza-10.jpg" alt="pizza">
+            </div>
+            <div class="icons-wrapper">
+              <a href="#"><i class="fa-solid fa-heart"></i></a>
+              <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+          <div class="gallery-box">
+            <div class="picture-wrapper">
+              <img src="./images/home/pizza-11.jpg" alt="pizza">
+            </div>
+            <div class="icons-wrapper">
+              <a href="#"><i class="fa-solid fa-heart"></i></a>
+              <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="instagram italic"><i class="fa-brands fa-instagram"></i> See more at our instagram!</a>
       </div>
     </script>
 
